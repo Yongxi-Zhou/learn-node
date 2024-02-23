@@ -4,7 +4,7 @@ function getConfig(args) {
     }
     else {
         console.log('Using defaults');
-        return {hostname: 'localhost', port: 8000};
+        return {hostname: 'localhost', port: 5000};
     }
 }
 
