@@ -6,5 +6,5 @@ fs.readFile("./operations/data.txt", (err, data) => {
     fs.unlinkSync("./operations/data.txt");		// delete the file
   } 
 });
-fs.unlinkSync("./operations/data.txt");		// delete the file
+// fs.unlinkSync("./operations/data.txt");		// delete the file
 
