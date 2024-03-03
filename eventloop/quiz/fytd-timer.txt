@@ -1,1 +1,12 @@
 - In eventloop/timer.js, what will be the order of execution? Briefly explain the order of execution w.r.t the event loop phases.
+
+First, we start by executing foo(2). Then put bar(2) into the pending callback. Next, we execute baz().
+Then, we execute foo(1). Then put bar(1) into the pending callback. Next, we execute baz().
+After the last execution in the main thread completes, it starts executing the tasks in the event loop. That is, bar(2) and bar(1).
+So, the output is as follows:
+foo
+baz
+foo
+baz
+2 : bar
+1 : bar

@@ -1,3 +1,10 @@
 - Explain the order of execution in terms of the event loop for eventloop/poll_timer.js.
+SomeAsyncOperation is a IO operation, which is a macro task. The setTimeout is also a macro task.
+Both of them are put in event loop in the macro task callback queue. And someAsyncOperation executed first and then setTimeout.
+
+
 - Will the order of execution change if the delay in the while loop is changed from 10s to 150s? Why or why not?
+No. Because the order of execution defined in the function isn't changed.
+
 - Will the order of execution change if timeout is changed to 0? Why or why not?
+Yes. timeout takes less time that IO event.
